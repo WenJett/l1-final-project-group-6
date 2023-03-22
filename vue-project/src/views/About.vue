@@ -5,6 +5,9 @@
 </template>
 
 <script>
+import firebaseApp from "@/firebase.js";
+import {getAuth} from "firebase/auth";
+
 export default {
     name: "About"
 }

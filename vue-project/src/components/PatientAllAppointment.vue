@@ -20,7 +20,8 @@
 </template>
 
 <script>
-import firebaseApp from "../firebase.js";
+import firebaseApp from "@/firebase.js";
+import {getAuth} from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { doc,deleteDoc } from "firebase/firestore";
 
