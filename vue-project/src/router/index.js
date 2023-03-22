@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/views/Home.vue'
 import About from '@/views/About.vue'
 import Profile from '@/views/Profile.vue'
+import ResetPassword from '@/views/ResetPassword.vue'
 
 const routes = [
     {
@@ -18,6 +19,11 @@ const routes = [
         path: '/profile',
         name: 'Profile',
         component: Profile
+    },
+    {
+        path: '/resetpassword',
+        name: 'ResetPassword',
+        component: ResetPassword
     }
 ]
 
