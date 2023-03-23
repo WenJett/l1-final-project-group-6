@@ -42,7 +42,7 @@ const db = getFirestore(firebaseApp);
 
 const current = new Date();
 const todaydate = String(`${current.getFullYear()}-0${current.getMonth()+1}-${current.getDate()}`);
-console.log(todaydate);
+// console.log(todaydate);
 
 export default {
     methods: {
@@ -65,8 +65,8 @@ export default {
                 } else if (String(time) < "09:00" || String(time) > "13:00" && String(time) < "14:00" || String(time) > "18:00") {
                     throw new Error("Invalid time chosen, please select again");
                 }
-                // need to change "app1" to  something unique eg patientemail n tag with date maybe
-                const docRef = await setDoc(doc(db, "patient" , "app1"), {
+                // "patient" will become user's email, document name now is date+time since we only allow 1 apppointment for each timing anyways
+                const docRef = await setDoc(doc(db, "patient" , (String(date) + String(time))), {
                     Date : date, Time : time, Location: location, Purpose : purpose
                 })
                 console.log(docRef);
