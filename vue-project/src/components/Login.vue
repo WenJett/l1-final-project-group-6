@@ -20,7 +20,8 @@ import 'firebaseui/dist/firebaseui.css'
 export default {
     name:"Login",
 
-    mounted(){
+    mounted() {
+
         //CAlling the ui instance
         var ui = firebaseui.auth.AuthUI.getInstance();
         if(!ui) {
@@ -36,6 +37,7 @@ export default {
                 firebase.auth.EmailAuthProvider.PROVIDER_ID,
             ]
         };
+
         ui.start("#firebaseui-auth-container", uiConfig)  
     }
 }
@@ -43,10 +45,10 @@ export default {
 </script>
 
 <style scoped>
-h1{
-    font-family: Marker Felt, fantasy;
-    font-weight: 50;
-    font-variant: small-caps;
-    text-align: center;
+#firebaseui-auth-container{
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
+
+
 </style>
