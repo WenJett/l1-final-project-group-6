@@ -1,6 +1,8 @@
 <script setup>
 import Login from '@/components/Login.vue'
-
+// import PatientNextAppointment from '../components/PatientNextAppointment.vue';
+// import PatientAllAppointment from "../components/PatientAllAppointment.vue";
+import PatientBookAppointment from '../components/PatientBookAppointment.vue';
 </script>
 
 <template>
