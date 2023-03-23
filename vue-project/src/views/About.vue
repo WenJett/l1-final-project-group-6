@@ -1,4 +1,6 @@
 <template>
+    <NavBar/>
+    
     <img src="@/assets/round_logo.png" alt="logo" width="250">
 
 
@@ -28,15 +30,24 @@
         Ang Mo Kio 9am - 1pm & 2pm - 6pm   Hotline: +65 9876 5432 <br>
         Seng Kang 9am - 1pm & 2pm - 6pm   Hotline: +65 9123 4567
         
-    </div>
+    </div> <br><br>
+
+    <Logout/>
 </template>
 
 <script>
 import firebaseApp from "@/firebase.js";
 import {getAuth} from "firebase/auth";
+import NavBar from '@/components/NavBar.vue';
+import Logout from '@/components/Logout.vue';
 
 export default {
-    name: "About"
+    name: "About",
+
+    components:{
+    NavBar,
+    Logout
+  },
 }
 
 </script>
