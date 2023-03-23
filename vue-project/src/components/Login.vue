@@ -3,7 +3,10 @@
         <h1 id="mainHead">Welcome to Healthfirst</h1>
         <div id="firebaseui-auth-container"></div>
         <div id="pageContent">
-            Testting testing 123
+            <div class = "forgetPassword">
+                    <!-- <button id="forgetPassword" type="button"  v-on:click="redirectResetPW"> Forget Password </button> -->
+                    <router-link to="/resetpassword" tag="button">Forget Password</router-link>
+            </div>
         </div>
     </div>
 </template>
@@ -18,6 +21,7 @@ export default {
     name:"Login",
 
     mounted() {
+
         //CAlling the ui instance
         var ui = firebaseui.auth.AuthUI.getInstance();
         if(!ui) {
@@ -33,10 +37,11 @@ export default {
                 firebase.auth.EmailAuthProvider.PROVIDER_ID,
             ]
         };
-        ui.start("#firebaseui-auth-container", uiConfig)
 
+        ui.start("#firebaseui-auth-container", uiConfig)  
     }
 }
+
 </script>
 
 <style scoped>
