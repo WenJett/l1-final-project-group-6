@@ -1,6 +1,7 @@
 <template>
     <div style="text-align: center;">
         <h1 id="mainHead">Welcome to Healthfirst</h1>
+        <img src="@/assets/round_logo.png" alt="logo" width="250">
         <div id="firebaseui-auth-container"></div>
         <div id="pageContent">
             <div class = "forgetPassword">
