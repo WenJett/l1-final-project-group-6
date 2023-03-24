@@ -4,10 +4,17 @@ import Home from '@/views/Home.vue'
 import About from '@/views/About.vue'
 import Profile from '@/views/Profile.vue'
 import ResetPassword from '@/views/ResetPassword.vue'
+import MainLanding from '@/views/MainLanding.vue'
 
 const routes = [
     {
         path: "/",
+        name: "MainLanding",
+        component: MainLanding,
+    },
+
+    {
+        path: "/login",
         name: "Login",
         component: Login,
     },
