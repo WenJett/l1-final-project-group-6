@@ -4,6 +4,8 @@ import Home from '@/views/Home.vue'
 import About from '@/views/About.vue'
 import Profile from '@/views/Profile.vue'
 import ResetPassword from '@/views/ResetPassword.vue'
+import AccountType from '@/views/AccountType.vue'
+
 
 const routes = [
     {
@@ -30,6 +32,11 @@ const routes = [
         path: '/resetpassword',
         name: 'ResetPassword',
         component: ResetPassword
+    },
+    {
+        path: '/accounttype',
+        name: 'AccountType',
+        component: AccountType
     }
 ]
 
@@ -39,3 +46,4 @@ const router = createRouter({
 })
 
 export default router
+

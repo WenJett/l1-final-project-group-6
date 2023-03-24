@@ -2,9 +2,9 @@
   <NavBar/>
   <img src="@/assets/logo.png" alt="fail!!">
   <br><br>
+  <AccountTypeDisplay />
   <Logout />
 </template>
-
 
 <script>
 //import Login from '@/components/Login.vue'
@@ -13,12 +13,14 @@
 import NavBar from '@/components/NavBar.vue';
 import Logout from '@/components/Logout.vue';
 import PatientBookAppointment from '../components/PatientBookAppointment.vue';
+import AccountTypeDisplay from '../components/AccountTypeDisplay.vue';
 
 export default {
   name:"Home",
   
   components:{
     NavBar,
+    AccountTypeDisplay,
     Logout
   },
 
