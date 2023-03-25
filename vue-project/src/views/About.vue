@@ -1,6 +1,7 @@
 <template>
-    <NavBar/>
-    
+    <!--<NavBar/>-->
+    <CommonHeader />
+    <br>
     <img src="@/assets/round_logo.png" alt="logo" width="250">
 
 
@@ -32,21 +33,23 @@
         
     </div> <br><br>
 
-    <Logout/>
+    <!--<Logout/>-->
 </template>
 
 <script>
-import firebaseApp from "@/firebase.js";
-import {getAuth} from "firebase/auth";
-import NavBar from '@/components/NavBar.vue';
-import Logout from '@/components/Logout.vue';
+//import firebaseApp from "@/firebase.js";
+//import {getAuth} from "firebase/auth";
+//import NavBar from '@/components/NavBar.vue';
+//import Logout from '@/components/Logout.vue';
+import CommonHeader from '@/components/CommonHeader.vue';
 
 export default {
     name: "About",
 
     components:{
-    NavBar,
-    Logout
+    //NavBar,
+    //Logout,
+    CommonHeader
   },
 }
 

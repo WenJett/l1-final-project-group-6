@@ -1,6 +1,8 @@
 <template>
     <div class="box">
-        <button class="button login" onclick="window.location.href = 'login';">Register / Login</button>
+        <button class="button login" onclick="window.location.href = '/login';">Register / Login</button>
+        <button class="button about" onclick="window.location.href = '/about';">About Us</button>
+        <button class="button hoem" onclick="window.location.href = '/';">Home</button>
     </div>
 </template>
 

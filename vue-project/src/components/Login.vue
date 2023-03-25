@@ -1,4 +1,6 @@
 <template>
+    <CommonHeader />
+    <br>
     <div style="text-align: center;">
         <h1 id="mainHead">Welcome to Healthfirst</h1>
         <img src="@/assets/round_logo.png" alt="logo" width="250">
@@ -17,9 +19,14 @@ import firebase from '@/uifire.js'
 import 'firebase/compat/auth';
 import * as firebaseui from 'firebaseui'
 import 'firebaseui/dist/firebaseui.css'
+import CommonHeader from '@/components/CommonHeader.vue';
 
 export default {
     name:"Login",
+    
+    components:{
+        CommonHeader
+    },
 
     mounted() {
 
@@ -42,6 +49,8 @@ export default {
         ui.start("#firebaseui-auth-container", uiConfig)  
     }
 }
+
+
 
 </script>
 
