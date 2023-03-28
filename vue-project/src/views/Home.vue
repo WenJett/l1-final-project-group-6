@@ -1,19 +1,19 @@
 <template>
-  <NavBar/>
   <img src="@/assets/logo.png" alt="fail!!">
+  <NavBar/>
   <br><br>
   <AccountTypeDisplay />
+  <PatientNextAppointment />
+  <br><br>
   <Logout />
 </template>
 
 
 <script>
 //import Login from '@/components/Login.vue'
-// import PatientNextAppointment from '../components/PatientNextAppointment.vue';
-// import PatientAllAppointment from "../components/PatientAllAppointment.vue";
+import PatientNextAppointment from '../components/PatientNextAppointment.vue';
 import NavBar from '@/components/NavBar.vue';
 import Logout from '@/components/Logout.vue';
-import PatientBookAppointment from '../components/PatientBookAppointment.vue';
 import AccountTypeDisplay from '../components/AccountTypeDisplay.vue';
 
 
@@ -23,8 +23,9 @@ export default {
   components:{
     NavBar,
     AccountTypeDisplay,
+    PatientNextAppointment,
     Logout
-  },
+  }
 
   // data() {
   //       return {

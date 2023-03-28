@@ -1,15 +1,17 @@
 <template>
     <!-- also need add v-if ="patient" such that only patient will display this after login -->
-    <table v-if = "showTable" id = "allAppointmentTable" class = "auto-index">
+    <table v-if = "showTable" id = "table" class = "auto-index">
         <tr>
             <th style = "width:10%">S.No</th>
-            <th style = "width:30%">Appoinment Date</th>
-            <th style = "width:30%">Location</th>
-            <th style = "width:30%">Purpose of Visit</th>
-            <th>Appointment Time</th>
+            <th style = "width:25%">Appoinment Date</th>
+            <th style = "width:20%">Location</th>
+            <th style = "width:25%">Purpose of Visit</th>
+            <th style = "width:25%">Appointment Time</th>
             <th>Option</th>
         </tr>
     </table>
+    <br><br>
+    <button @click="$router.push('patientbookappointment')">Click to Book New Appointment</button>
 </template>
 
 <script>
@@ -40,7 +42,7 @@ export default {
                 let time = (appointmentData.Time);
                 let docID = String(date) + String(time)
 
-                let table = document.getElementById("allAppointmentTable");
+                let table = document.getElementById("table");
                 let row = table.insertRow(index);
 
                 let cell1 = row.insertCell(0);
@@ -87,21 +89,19 @@ export default {
 
 
 <style scoped>
-table, th, td {
-    border: 2px inset #96D4D4;
+table {
+    border-collapse: collapse;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
-}
-th, td {
-    background-color: white;
-    border: 2px solid black;
-    text-align: center;
-    padding: 5px;
+    background: white;
 }
 
-tr:nth-child(even) {
-  background-color: #96D4D4;
+th,td {
+    border: 2px solid black;
+    text-align: center;
 }
+
+
 
 </style>

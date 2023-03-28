@@ -25,6 +25,14 @@
                     <option> Others </option> 
                 </datalist>
 
+                <!-- If want to have doctor input when patient book so that can access DB for doctor side and add to there as well-->
+                <!-- <label for="doctor1">Doctor: </label>
+                <input type="text" id="doctor1" required="" list = "doctors"> <br><br>
+                <datalist id="doctors">
+                    <option> Dr. Alpha </option>
+                    <option> Dr.Beta </option>
+                </datalist> -->
+
 
                 <div class = "save">
                     <button id = "saveButton" type = "button" v-on:click = "savetofs"> Save </button><br><br>
@@ -39,6 +47,7 @@ import firebaseApp from "@/firebase.js";
 import {getAuth} from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { doc, setDoc } from "firebase/firestore";
+import router from "../router";
 const db = getFirestore(firebaseApp);
 
 const current = new Date();
@@ -64,15 +73,15 @@ export default {
                 if(date < todaydate) {
                     throw new Error("Invalid date chosen, please select again");
                 } else if (String(time) < "09:00" || String(time) > "13:00" && String(time) < "14:00" || String(time) > "18:00") {
-                    throw new Error("Invalid time chosen, please select again");
+                    throw new Error("Invalid time chosen, our operating hours is 9am to 1pm, 2pm to 6pm");
                 }
                 // "patient" will become user's email, document name now is date+time since we only allow 1 apppointment for each timing anyways
                 const docRef = await setDoc(doc(db, "patient" , (String(date) + String(time))), {
                     Date : date, Time : time, Location: location, Purpose : purpose
                 })
-                console.log(docRef);
                 document.getElementById("myform").reset();
                 this.$emit("added");
+                router.push('patientappointment');
             }
             catch(error) {
                 console.error("Error adding document: ", error);
@@ -86,7 +95,10 @@ export default {
 
 <style scoped>
 h2 {
-    background-color: gray;
+    background-color: lightblue;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .formli {
@@ -114,4 +126,5 @@ input:hover {
 #date1, #location1, #time1, #purpose1 {
     width: 400px;
 }
+
 </style>
