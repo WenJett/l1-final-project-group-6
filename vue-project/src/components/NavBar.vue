@@ -3,7 +3,7 @@
         <div id="nav">
             <router-link to="/home">Home</router-link> |
             <router-link to="/patientappointment">Appointments</router-link> |
-            <!--<router-link to="/medicine">Medicine</router-link> | --> 
+            <router-link to="/patientmedicine">Medicine</router-link>
         </div>
     </div>
 

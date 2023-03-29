@@ -7,6 +7,8 @@ import ResetPassword from '@/views/ResetPassword.vue'
 import MainLanding from '@/views/MainLanding.vue'
 import PatientAppointment from '@/views/PatientAppointment.vue'
 import PatientBookAppointment from '@/views/PatientBookAppointment.vue'
+import PatientMedicine from '@/views/PatientMedicine.vue'
+import PatientMedDetails from '@/views/PatientMedDetails.vue'
 
 const routes = [
     {
@@ -49,6 +51,16 @@ const routes = [
         path: '/patientbookappointment',
         name: 'PatientBookAppointment',
         component: PatientBookAppointment
+    },
+    {
+        path: '/patientmedicine',
+        name: 'PatientMedicine',
+        component: PatientMedicine
+    },
+    {
+        path: '/patientmeddetails',
+        name: 'PatientMedDetails',
+        component: PatientMedDetails
     }
 ]
 
